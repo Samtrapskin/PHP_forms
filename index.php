@@ -1,5 +1,92 @@
-<?php
 
-echo "hello World";
 
-?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>PHP Forms</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- bootstrap javascript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <?php 
+
+    $user_Name = "";
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    
+        $user_Name=filter_var($_POST['firstName'],FILTER_SANITIZE_NUMBER_INT);
+    
+    }
+     ?>
+    <h1>Practice with PHP</h1>
+<div class="container" id="form-container">
+    <form method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" class="form-control" id="firstName" value="<?= $user_Name;?>">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>Minnesota</option>
+              <option>Wisconson</option>
+              <option>California</option>
+              <option>Washington</option>
+              <option>Texas</option>
+
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="number" class="form-control" id="inputZip">
+          </div>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit information</button>
+      </form>
+      <div class="user-response">
+        <h6>Hello  <?= $user_answer;?>,</h6>
+        <p>Please make sure the following info is correct</p>
+        <p>First name: </p>
+        <p>Last name:</p>
+        <p>Address:</p>
+        <p>City:</p>
+        <p>State:</p>
+        <p>Zipcode:</p>
+        <div class="response-buttons">
+        <button type="submit" class="btn btn-primary">Info is correct</button>
+        <button type="button" class="btn btn-danger">Incorrect info</button>
+
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>
