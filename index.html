@@ -22,11 +22,11 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="firstName">First name</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <input type="text" class="form-control" id="firstName">
           </div>
           <div class="form-group col-md-6">
             <label for="lastName">Last name</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <input type="text" class="form-control" id="lastName">
           </div>
         </div>
         <div class="form-group">
@@ -42,20 +42,38 @@
             <label for="inputState">State</label>
             <select id="inputState" class="form-control">
               <option selected>Choose...</option>
-              <option>...</option>
+              <option>Minnesota</option>
+              <option>Wisconson</option>
+              <option>California</option>
+              <option>Washington</option>
+              <option>Texas</option>
+
             </select>
           </div>
           <div class="form-group col-md-2">
             <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
+            <input type="number" class="form-control" id="inputZip">
           </div>
         </div>
     
         <button type="submit" class="btn btn-primary">Submit information</button>
       </form>
+      <div class="user-response">
+        <h6>Hello ,</h6>
+        <p>Please make sure the following info is correct</p>
+        <p>First name: </p>
+        <p>Last name:</p>
+        <p>Address:</p>
+        <p>City:</p>
+        <p>State:</p>
+        <p>Zipcode:</p>
+        <div class="response-buttons">
+        <button type="submit" class="btn btn-primary">Info is correct</button>
+        <button type="button" class="btn btn-danger">Incorrect info</button>
+
     </div>
-    <div class="user-response">
-        <p></p>
     </div>
+    </div>
+
 </body>
 </html>
