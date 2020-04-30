@@ -1,3 +1,21 @@
 h1{
 color:red
 }
+
+#form-container{
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: aquamarine;
+    padding: 25px;
+}
+
+label {
+    text-align: left;
+}
+
+.user-response {
+    float: right;
+}
