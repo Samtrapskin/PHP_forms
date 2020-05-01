@@ -1,5 +1,6 @@
 h1{
-color:red;
+color:#333333;
+font-family: 'handel gothic';
 }
 
 
@@ -27,6 +28,7 @@ label {
 }
 
 .user-response {
+    display: hidden;
     float: right;
     text-align: initial;
     border-style: solid;
@@ -35,7 +37,7 @@ label {
 
 #greeting{
     color:red;
-    font-size: 34px;
+    font-size: 4px;
 }
 
 .response-buttons{
