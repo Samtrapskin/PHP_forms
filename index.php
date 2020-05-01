@@ -29,13 +29,13 @@
     
     }
      ?>
-    <h1>Practice with PHP</h1>
+    <h1>Practice withq4fr PHP</h1>
 <div class="container" id="form-container">
-    <form method="post">
+    <form method="post" action="index.php">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="firstName">First name</label>
-            <input type="text" name="firstName" class="form-control" id="firstName" value="<?= $user_Name;?>">
+            <input type="text" name="firstName" class="form-control" id="firstName" value="<?php echo $user_Name;?>">
           </div>
           <div class="form-group col-md-6">
             <label for="lastName">Last name</label>
@@ -72,8 +72,9 @@
         <button type="submit" class="btn btn-primary">Submit information</button>
       </form>
       <div class="user-response">
-        <h6>Hello  <?= $user_answer;?>,</h6>
-        <p>Please make sure the following info is correct</p>
+      <p id="greeting"><?= $_POST["firstName"];?></p>
+       
+          <p>lease make sure the following info is correct</p>
         <p>First name: </p>
         <p>Last name:</p>
         <p>Address:</p>
